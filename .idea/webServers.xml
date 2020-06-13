@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9f06be8b-881d-458e-8574-0968684321cd" name="dimafilipenko.website" url="https://dimafilipenko.website/">
+        <fileTransfer rootFolder="/www/dimafilipenko.website/portfolio" accessType="FTPS" host="91.235.128.192" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
