@@ -9,7 +9,11 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 import Vue from 'vue'
+import router from "./router";
+import Router from 'vue-router'
+import App from "./components/App";
 
+Vue.use(Router)
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
 // Install BootstrapVue
@@ -19,6 +23,7 @@ Vue.use(IconsPlugin)
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import 'animate.css/animate.css'
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -30,7 +35,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -40,4 +45,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
+    render: h => h(App),
+    router
 });
+
