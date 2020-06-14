@@ -1,5 +1,5 @@
 import VueRouter from 'vue-router'
-import MainComponent from "./components/MainComponent";
+import MainComponent from "./components/LayoutComponent";
 
 
 export default new VueRouter({

@@ -1,14 +1,14 @@
 <template>
     <div v-bind:class="centered">
         <p  class="animate__animated hello  Nunito  text-center "  v-bind:class="animation+' '+displayBig"  >
-            {{msg}}
+      fdsfdsfs
         </p>
     </div>
 
 </template>
 
 <script>
-    import MainComponent from "./MainComponent";
+    import MainComponent from "./LayoutComponent";
     export default {
         name: "MyNameComponent",
         components: {MainComponent},

@@ -6,13 +6,13 @@
         <p  class="animate__animated   Nunito  text-center  "
             v-bind:class="animation+' '+displayBig"
         >{{msg}}</p>
-        ))
+
     </div>
 
 </template>
 
 <script>
-    import MainComponent from "./MainComponent";
+    import MainComponent from "./LayoutComponent";
     export default {
         name: "HelloComponent",
         components: {MainComponent},
