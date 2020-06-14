@@ -1,11 +1,12 @@
 <template>
 
-    <div class="vertical-center vh-100 text-center justify-content-center text-justify align-items-center d-flex"> <!--
-                      ^--- Added class  -->
 
 
-              <p class="display-1 hello ">HELLO</p>
-
+    <div v-bind:class="centered">
+        <p  class="animate__animated   Nunito  text-center  "
+            v-bind:class="animation+' '+displayBig"
+        >{{msg}}</p>
+        ))
     </div>
 
 </template>
@@ -14,12 +15,38 @@
     import MainComponent from "./MainComponent";
     export default {
         name: "HelloComponent",
-        components: {MainComponent}
+        components: {MainComponent},
+        props: ['msg'],
+        data() {
+            return {
+                centered:"vh-100 justify-content-center  align-items-center d-flex",
+                animation: "animate__fadeIn",
+                displayBig: "display-1",
+            }
+        },
+        methods:{
+
+             changeAnimation(){
+
+                 this.animation="animate__fadeOut"
+            },
+
+        },
+        mounted() {
+
+            setTimeout(this.changeAnimation, 2000);
+
+
+
+        }
     }
 </script>
 
 <style scoped>
-    .hello{
+    .Nunito{
         font-family: "Nunito", sans-serif;
     }
+
+
+
 </style>
